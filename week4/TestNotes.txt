@@ -1,22 +1,22 @@
 Week 4 experiments
-Pathway:
-Website / 3D page:
+Pathway: Blog 
+Website / 3D page: Babylon
 
 Experiment
-What I expected:
-File and code/value I changed:
-What I observed (or exact error):
-What I kept, restored, or corrected:
+What I expected: Nothing
+File and code/value I changed: I changed the plane size as well as the sphere size.
+What I observed (or exact error): The sphere changed size to be bigger as well as the plane
+What I kept, restored, or corrected: I kept the changes because they were #cute and I liked them
 My next test:
-
+Will be adding my own model and seeing how it might work
 Changes I made:
-
+Size of sphere and size of plane
 Future tests and ideas:
-
+Will make the website come together by adding a more appealing css, and making it all related to the blog.
 Final checks
-Website -> 3D page -> website:
-Scene and description agree:
-Narrow and wide layout:
-Keyboard navigation:
-Console errors / unresolved issues:
-Peer observation and correction:
+Website -> 3D page -> website: PASS
+Scene and description agree: N/A
+Narrow and wide layout: N/A
+Keyboard navigation: N/A
+Console errors / unresolved issues: N/A
+Peer observation and correction: N/A
