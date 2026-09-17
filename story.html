@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mr. Clean and the Rotten Fridge</title>
+    <meta
+      name="description"
+      content="The full story of the evil refrigerator, the rot radius, Mr. Clean, and the Arm & Hammer."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-wrap">
+        <span class="brand-mark">MR</span>
+        <div>
+          <p class="brand-name">The Rot Beneath the Fridge</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="story.html" class="active">Story</a>
+        <a href="week4/3d.html">3D Fridge</a>
+      </nav>
+    </header>
+
+    <main class="story-shell">
+      <section class="story-intro">
+        <p class="eyebrow">The tale unfolds</p>
+        <h1>Mr. Clean and the power of restoration</h1>
+        <p>
+          The kitchen was supposed to be spotless. Instead, a foul little apocalypse started
+          in the refrigerator and spread in a rotten, glowing radius. Mr. Clean is the only one
+          who can save the day, but first he has to find the Arm & Hammer.
+        </p>
+      </section>
+
+      <section class="story-progress" aria-label="Story progress">
+        <div class="progress-header">
+          <h2>Mission tracker</h2>
+          <span id="progress-status">1/4 chapters explored</span>
+        </div>
+        <div class="progress-steps">
+          <button type="button" class="step-dot active" data-step="0">1</button>
+          <button type="button" class="step-dot" data-step="1">2</button>
+          <button type="button" class="step-dot" data-step="2">3</button>
+          <button type="button" class="step-dot" data-step="3">4</button>
+        </div>
+      </section>
+
+      <div class="chapter-list">
+        <article class="story-card open">
+          <button type="button" class="story-toggle" data-story-toggle>
+            <span>Chapter 1: The Rot Begins</span>
+            <span>−</span>
+          </button>
+          <div class="story-body">
+            <p>
+              The fridge woke up in the middle of the night with a nasty hum and a smell like a
+              failed smoothie. Inside, the food was already rotten to the core, and that rot was
+              feeding the machine like a bad power source.
+            </p>
+            <p>
+              Suddenly, the room was in danger. Fruit went soft. Bread went moldy. The kitchen was
+              trapped inside a glowing ring of decay, and the danger kept spreading.
+            </p>
+          </div>
+        </article>
+
+        <article class="story-card">
+          <button type="button" class="story-toggle" data-story-toggle>
+            <span>Chapter 2: Mr. Clean's Trial</span>
+            <span>+</span>
+          </button>
+          <div class="story-body">
+            <p>
+              Mr. Clean arrived at the kitchen in full hero mode, ready to scrub the nightmare away.
+              But he quickly learned that this was no ordinary mess. The rotten core inside the fridge
+              was stronger than any broom, sponge, or spray bottle in the world.
+            </p>
+            <p>
+              The challenge was bigger than a dirty appliance. This was a battle between cleanliness
+              and total collapse, and the villain was winning.
+            </p>
+          </div>
+        </article>
+
+        <article class="story-card">
+          <button type="button" class="story-toggle" data-story-toggle>
+            <span>Chapter 3: The Hidden Weapon</span>
+            <span>+</span>
+          </button>
+          <div class="story-body">
+            <p>
+              While chasing clues through the kitchen wreckage, Mr. Clean found an old legend: the
+              Arm & Hammer was the only thing capable of reversing the rot. It wasn't a weapon of
+              destruction. It was a weapon of restoration.
+            </p>
+            <ul>
+              <li>The hammer could cleanse the stain of decay.</li>
+              <li>It restored order by neutralizing the rotten core.</li>
+              <li>Only a hero with conviction could wield it properly.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="story-card">
+          <button type="button" class="story-toggle" data-story-toggle>
+            <span>Chapter 4: The Final Purge</span>
+            <span>+</span>
+          </button>
+          <div class="story-body">
+            <p>
+              Mr. Clean raced to the edge of the decay field, grabbed the Arm & Hammer, and struck the
+              rotten core. The kitchen flashed bright as the rot was blasted back in a burst of clean,
+              golden power.
+            </p>
+            <p>
+              The evil fridge froze. The decay faded. The kitchen breathed again, and peace returned
+              to the home.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <section class="story-quest" aria-label="Quest summary">
+        <div class="quest-panel">
+          <h3>Choose Mr. Clean's next move</h3>
+          <div class="choice-grid">
+            <button class="choice-button" type="button" data-choice="pantry">
+              Search the pantry
+            </button>
+            <button class="choice-button" type="button" data-choice="weapon">
+              Chase the Arm & Hammer
+            </button>
+            <button class="choice-button" type="button" data-choice="fridge">
+              Confront the fridge
+            </button>
+          </div>
+          <div id="choice-result" class="choice-result" aria-live="polite">
+            Mr. Clean chooses the hero path. The kitchen still needs a plan.
+          </div>
+        </div>
+
+        <div class="quest-panel">
+          <h3>Quest checklist</h3>
+          <ul class="quest-list">
+            <li><button class="quest-task" type="button">Find the source of the rot</button></li>
+            <li><button class="quest-task" type="button">Track the Arm & Hammer</button></li>
+            <li><button class="quest-task" type="button">Break the fridge's core</button></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,13 +1,202 @@
-* { box-sizing: border-box; }
-[hidden] { display: none !important; }
-body { margin: 0; background: #101e24; color: #f4f4ed; font: 1.05rem/1.65 system-ui, sans-serif; }
-main { width: min(100% - 2rem, 64rem); margin: 2rem auto; }
-h1 { line-height: 1.2; }
-a { color: #9fe4e8; }
-code { overflow-wrap: anywhere; }
-#renderCanvas { display: block; width: 100%; height: min(56vw, 32rem); min-height: 15rem; border: 1px solid #678089; touch-action: none; }
-button { font: inherit; padding: .65rem 1rem; background: #e6b56a; color: #142026; border: 2px solid transparent; cursor: pointer; }
-button:disabled { opacity: .5; cursor: default; }
-:focus-visible { outline: 3px solid #ffe4a9; outline-offset: 5px; }
-@media (max-width: 480px) { main { margin: 1.25rem auto; } }
-@media print { body { background: white; color: black; } #renderCanvas, button { display: none; } a { color: black; } }
+:root {
+  --bg-deep: #07141a;
+  --bg-mid: #13242d;
+  --panel: rgba(18, 31, 38, 0.9);
+  --panel-border: rgba(145, 184, 176, 0.28);
+  --ember: #ff8e68;
+  --gold: #f2c56d;
+  --mint: #8dd9a5;
+  --text: #edf5f2;
+  --muted: #bfd2d2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font: 1.05rem/1.65 "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(255, 142, 104, 0.18), transparent 28%),
+    linear-gradient(180deg, var(--bg-deep), var(--bg-mid));
+  color: var(--text);
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.scene-page {
+  padding: 1.25rem 0 2rem;
+}
+
+.scene-shell {
+  width: min(100% - 1.4rem, 1200px);
+  margin: 0 auto;
+}
+
+.scene-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.back-link,
+.mini-nav a {
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.mini-nav {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.scene-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14rem;
+  color: var(--gold);
+  font-size: 0.72rem;
+}
+
+.scene-header h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+}
+
+.status-box {
+  min-width: 220px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.9rem;
+  padding: 0.8rem 1rem;
+}
+
+#scene-status {
+  margin: 0;
+  color: var(--muted);
+}
+
+.scene-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(260px, 0.75fr);
+  gap: 1.25rem;
+}
+
+.canvas-panel,
+.scene-sidepanel {
+  background: rgba(18, 30, 39, 0.88);
+  border: 1px solid var(--panel-border);
+  border-radius: 1.2rem;
+  box-shadow: 0 24px 35px rgba(0, 0, 0, 0.25);
+}
+
+.canvas-panel {
+  padding: 0.9rem;
+}
+
+#renderCanvas {
+  display: block;
+  width: 100%;
+  height: min(62vw, 40rem);
+  min-height: 22rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  touch-action: none;
+  background: #081b1f;
+}
+
+#scene-description,
+#scene-controls {
+  margin: 0.8rem 0 0;
+  color: var(--muted);
+}
+
+.scene-sidepanel {
+  padding: 1.2rem;
+}
+
+.scene-sidepanel h2 {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+}
+
+.scene-sidepanel ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.scene-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin: 1.1rem 0;
+}
+
+button {
+  border-radius: 999px;
+  border: none;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+#pulse-fridge {
+  background: linear-gradient(135deg, var(--ember), var(--gold));
+  color: #1b160f;
+  font-weight: 700;
+}
+
+#reset-view {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(242, 197, 109, 0.9);
+  outline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .scene-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .scene-header,
+  .scene-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,3 +1,91 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Week 4 starter preview</title><link rel="stylesheet" href="week4/css/styles.css"></head>
-<body><main><h1>Week 4 starter preview</h1><p>This page only previews the starter. In your course project, keep your existing homepage and copy the <code>week4</code> folder beside it.</p><p><a href="week4/3d.html">Open the Babylon.js scene</a></p><p>Add that same link to your own homepage. Your chosen pathway supplies the content for your website.</p></main></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Rot Beneath the Refrigerator</title>
+    <meta
+      name="description"
+      content="Interactive story site about Mr. Clean, the evil refrigerator, and the Arm & Hammer that restores peace."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="home-page">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <span class="brand-mark">MR</span>
+        <div>
+          <p class="brand-name">The Rot Beneath the Fridge</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="story.html">Story</a>
+        <a href="week4/3d.html">3D Fridge</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">A kitchen catastrophe</p>
+          <h1>When the refrigerator became a monster.</h1>
+          <p class="lead">
+            The food inside the evil refrigerator was rotten to its core, feeding a
+            deadly radius of decay. The rot spreads, and only Mr. Clean can stop it
+            if he can find the Arm & Hammer.
+          </p>
+          <div class="hero-actions">
+            <a href="story.html" class="button primary">Read the story</a>
+            <a href="week4/3d.html" class="button secondary">Witness the evil fridge</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-live="polite">
+          <p class="panel-label">Rot energy</p>
+          <div class="power-readout">
+            <span id="rot-value">74%</span>
+            <small>Organic decay radius</small>
+          </div>
+          <div class="meter" aria-hidden="true">
+            <span id="meter-fill"></span>
+          </div>
+          <button id="hero-toggle" class="pulse-button" type="button">
+            Trigger rot surge
+          </button>
+        </aside>
+      </section>
+
+      <section class="story-grid" aria-label="Story highlights">
+        <article class="info-card">
+          <p class="card-tag">Threat</p>
+          <h2>The rotten core</h2>
+          <p>
+            The fridge hums with a foul energy that corrupts anything organic within
+            its radius, turning the kitchen into a place of ruin.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <p class="card-tag">Hero</p>
+          <h2>Mr. Clean</h2>
+          <p>
+            He is the only force with enough conviction to challenge the evil machine,
+            but he cannot win without the legendary Arm & Hammer.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <p class="card-tag">Weapon</p>
+          <h2>Arm & Hammer</h2>
+          <p>
+            The weapon restores balance, neutralizes the rot, and gives the hero the
+            power needed to bring peace back to the kitchen.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
