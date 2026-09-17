@@ -1,0 +1,1 @@
+Hello, this is the website I made that I collaborated with my team about. It is a story about an evil fridge and has interactable elements such as a story with quests and a "3D view of artistic representation of aforementioned fridge" The live website is located [here](https://lexicon-lexxie.github.io/LogicScriptsand3D/)
